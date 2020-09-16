@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trotti{% endblock %}
+
+{% block body %}
+    <h1>Trotti</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ trotti.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ trotti.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ trotti.prix }}</td>
+            </tr>
+            <tr>
+                <th>Marque</th>
+                <td>{{ trotti.marque }}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ trotti.quantite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('trotti_index') }}">back to list</a>
+
+    <a href="{{ path('trotti_edit', {'id': trotti.id}) }}">edit</a>
+
+    {{ include('trotti/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Trotti{% endblock %}
+
+{% block body %}
+    <h1>Edit Trotti</h1>
+
+    {{ include('trotti/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('trotti_index') }}">back to list</a>
+
+    {{ include('trotti/_delete_form.html.twig') }}
+{% endblock %}
